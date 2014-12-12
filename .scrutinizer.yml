@@ -17,9 +17,7 @@ build:
             environment: {  }
             background: false
       inference:
-        -
-         command: 'composer install --no-interaction'
-         idle_timeout: 600
+        - 'composer install --no-interaction'
 
 imports:
     - php
