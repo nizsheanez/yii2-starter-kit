@@ -10,6 +10,9 @@ build:
         override:
             - phpunit
 
+before_commands:
+    - 'composer install --dev --prefer-source --no-interaction'
+
 imports:
     - php
 
