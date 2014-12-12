@@ -7,7 +7,7 @@ filter:
         - 'tests/*'
 
 tools:
-    php_pdepend: true
+    php_pdepend: false
     php_analyzer: false
     php_sim: true
     # disable copy paste detector and simliarity analyzer as they have no real value
