@@ -1,11 +1,27 @@
 build:
     environment:
-        php:
-            version: 5.5.12
+      php:
+        version: 5.5.12
     dependencies:
-        before:
-            - sudo composer self-update && composer --version
-            - composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+      before:
+         -
+            command: 'composer self-update && composer --version'
+            cwd: .
+            idle_timeout: 180
+            environment: {  }
+            background: false
+         -
+            command: 'composer global require "fxp/composer-asset-plugin:1.0.0-beta1"'
+            cwd: .
+            idle_timeout: 180
+            environment: {  }
+            background: false
+        override: {  }
+          after: {  }
+          inference:
+            -
+             command: 'composer install --no-interaction'
+             idle_timeout: 600
 
 imports:
     - php
