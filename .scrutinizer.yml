@@ -16,12 +16,10 @@ build:
             idle_timeout: 180
             environment: {  }
             background: false
-        override: {  }
-          after: {  }
-          inference:
-            -
-             command: 'composer install --no-interaction'
-             idle_timeout: 600
+      inference:
+        -
+         command: 'composer install --no-interaction'
+         idle_timeout: 600
 
 imports:
     - php
